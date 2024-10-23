@@ -1,0 +1,194 @@
+/* 마진, 패딩, 리스트 스타일, 텍스트 데코레이션, 박스 사이징, 오버플로 초기화 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*레이아웃 디자인 시작*/
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body.dark {
+    background-color: black; /* 배경색을 검정색으로 */
+    color: white; /* 글씨 색상을 흰색으로 */
+  }
+  
+  body.dark .toolbar a,
+  body.dark .content a {
+    color: white; /* 툴바와 콘텐츠 링크 색상 */
+  }
+  
+
+
+
+
+  .content {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .logo {
+    margin: 20px 0;
+  }
+
+  footer {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.slide{
+    display: none; /* 기본적으로 숨김 */
+    img{width:100%; height:300px;
+}}
+
+.slide.active {
+    display: block; /* 활성화된 슬라이드만 표시 */
+}
+
+
+  .banner {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+    user-select: none;
+    z-index: 1; /* 버튼을 가장 위에 표시 */
+  }
+
+  .banner.big_ctrler{
+    background:#777; font-size: 1.5rem;
+  }
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
+
+
+
+  .menu-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 30px 0;
+    list-style-type: none;
+    overflow-x: auto;
+  }
+
+  .menu-list li {
+    margin: 0 15px;
+  }
+
+  .menu-list a {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .toolbar a {
+    margin: 0 5px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+
+  .price {
+    display: inline flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .discounted-price {
+    color: red;
+    font-weight: bold;
+  }
+
+  .function_btn{
+    width:130px;
+    background:#007a00;
+    padding: 10px;
+    border:0.5rem solid #aaa;
+    position:absolute;
+    left:0; top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center; /* 가운 화면 정렬 */
+    gap: 10px; /* 버튼 간 간격 조절 */
+    button{
+      background:black; color: white;
+      width:100%; height:50px;
+      font-weight: bold; font-size: 1rem;;}
+   }
+   .function_btn{position:fixed;}

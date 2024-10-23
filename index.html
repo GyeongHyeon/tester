@@ -1,81 +1,155 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{background:black; color:#fff;}
-        .main_contents{
-            width:80%; height:800px;
-            margin: 50px auto;
-            .notification_box{
-                text-align: center;
-            }
-            .img_box{
-                    width:20%; margin:0 auto; margin-top: 40px;
-                    img{width:100%; height:300px;}
-                }
-                section{
-                    width:100%; margin:0 auto;
-                }
-                table{width:100%; margin-top:30px;
-                    th{width:30%;}
-                    td{width:70%;}
-            }
-            table, th, td{border:1px solid #fff; border-collapse: collapse;}
+<meta charset="utf-8">
+<title>히즈빈스 데모 몰</title>
+<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
 
-
-@media (max-width: 500px) {
-    .img_box{
-                    width:60%; margin:0 auto; margin-top: 40px;
-                    img{width:100%; height:200px;}
-                }
-}
-                </style>
 </head>
 <body>
-    <div class="main_contents">
-    <div class="notification_box">
-        <h1>히즈빈스 게이샤 콜드브루는 안전합니다.</h1>
 
-<p>최근 뉴스에 일부 업체의 더치커피에서 대장균이 검출되었다는 내용이 보도되어</p>
+<a class="logo" href="table.html"><img src="#" alt="#" /></a></h1>
 
-<p>차가운 물로 추출하는 콜드브루의 위생에 불신이 생기게 되었습니다.</p>
+<div class="toolbar">
+  <a href="#" aria-label="로그인"><i class="fas fa-sign-in-alt"></i></a>
+  <a href="#" aria-label="회원가입"><i class="fas fa-user-plus"></i></a>
+  <a href="#" aria-label="장바구니"><i class="fas fa-shopping-cart"></i></a>
+</div>
 
-<p>하지만 히즈빈스 게이샤 콜드브루는 자가품질검사(발행번호 R20201029-0031)에서</p>
+<div class="content">
+  <ul class="menu-list">
+    <li><a href="#" data-filter="all" >전체</a></li>
+    <li><a href="#" data-filter="coffeebean" >원두</a></li>
+    <li><a href="#" data-filter="coldbrew" >콜드브루</a></li>
+    <li><a href="#" data-filter="dripbag" >드립백</a></li>
+    <li><a href="#" data-filter="dessert" >디저트</a></li>
+    <li><a href="#" data-filter="giftset" >선물세트</a></li>
+    <li><a href="#" data-filter="capsule coffe" >캡슐커피</a></li>
+  </ul>
 
-<p>납, 세균수, 대장균군, 허용 외 타르색소 모두 0.0으로 인증받아 판매를 시작하였으며,</p>
+  <div id="liveRegion" aria-live="polite" aria-atomic="true" style="position: absolute; left: -9999px;"></div>
+  <div class="slider" role="region" aria-label="슬라이드형 베너">
+    <a href="#" class="slide"><img src="img/1.jpg" alt="하얀 머그컵에 들어있는 게이샤 콜드브루" ></a>
+    <a href="#" class="slide"><img src="img/2.png" alt="히즈빈스_인스타그램" ></a>
+    <a class="slide" href="https://www.youtube.com/@HisbeansOfficial"><img src="img/3.png" alt="히즈빈스 유튜브 로고" ></a>
+    
+    <a role="button" class="prev banner" aria-label="이전 베너 버튼" onclick="changeSlide(-1)" href="#">&#10094;</a>
+    <a role="button" class="next banner" aria-label="다음 베너 버튼" onclick="changeSlide(1)" href="#">&#10095;</a>
+  </div>
+  
 
-<p>기사에 나온 식약청의 불시 온라인 주문 검사에서도 대장균 무검출로 통과한 제품입니다.</p>
-
-<p>저희 제품은 원두 로스팅에서부터 포장 과정 모두 오염이 있을 수 있는 일반 시설이 아닌</p>
-
-<p>HACCP 인증을 받은 곳에서 진행되고 있으니 안심하고 드세요 ^^﻿</p>
-
-
-
-
-
+	<h2 tabindex="0" class="main_title">상품 리스트</h2>
+  <div class="image-grid">
+    <div data-category="coldbrew">
+      <a href="#"><img src="img/게이샤.jpg" alt="히즈빈스 게이샤 블랜드 콜드브 파우치 이미지"></a>
+      <a href="#"><h3>히즈빈스 게이샤 블랜드 콜드브루 22ml 50개</h3></a>
+      <div class="price">
+        <p><del>25,000원</del>  →</p>
+        <p class="discounted-price">17,500원</p>
+      </div>
     </div>
-        <div class="img_box"><img src="1.png" /></div>
-        <section>
-            <table>
-                <tr>
-                    <th>상품명</th><td>히즈빈스 콜드브루 스페셜티 게이샤 오리지널 40ml×12팩</td>
-                </tr>
-                <tr>
-                    <th>형태 및 성분</th><td>파우치팩/ 더치 원액</td>
-                </tr>
-                <tr>
-                    <th>제조일</th><td></td>
-                </tr>
-                <tr>
-                    <th>소비기한</th><td></td>
-                </tr>
-            </table>
-        </section>
+
+    <div data-category="giftset">
+      <a href="#"><img src="img/히즈빈스 드립백.png" alt="버라이어티 선물세트 이미지"></a>
+        <a href="#"><h3>버라이어티 선물세트</h3></a>
+      <div class="price">
+        <p><del>15,000원</del>  →</p>
+        <p class="discounted-price">10,500원</p>
+      </div>
     </div>
+
+    <div data-category="dessert">
+      <a href="#"><img src="img/게이샤 콜드브루 쿠키세트.png" alt="게이샤 콜드브루 프리미엄 쿠키 선물세트 이미지"></a>
+      <a href="#"><h3>게이샤 콜드브루 프리미엄 쿠키 선물세트</h3></a>
+      <div class="price">
+        <p><del>25,000원</del>  →</p>
+        <p class="discounted-price">17,500원</p>
+      </div>
+    </div>
+
+    <div data-category="coldbrew">
+      <a href="#"><img src="img/히즈빈스 디카페인 콜드브루.jpg" alt="히즈빈스 디카페인 콜드브루 이미지"></a>
+      <a href="#"><h3>히즈빈스 디카페인 콜드브루 22ml 50개</h3></a>
+      <div class="price">
+        <p><del>30,000원</del>  →</p>
+        <p class="discounted-price">21,000원</p>
+      </div>
+    </div>
+
+    <div data-category="coffeebean">
+      <a href="#"><img src="img/히즈빈스 싱글오리진 케냐 키암부 탑(200g).jpg" alt="히즈빈스 싱글오리진 케냐 키암부 탑(200g) 이미지"></a>
+      <a href="#"><h3>히즈빈스 싱글오리진 케냐 키암부탑 (200g)</h3></a>
+      <div class="price">
+        <p><del>20,000원</del>  →</p>
+        <p class="discounted-price">14,000원</p>
+      </div>
+    </div>
+
+    <div data-category="giftset">
+      <a href="#"><img src="img/히즈빈스 콜드브루 선물세트.png" alt="히즈빈스 콜드브루 선물세트 이미지"></a>
+      <a href="#"><h3>히즈빈스 콜드브루 선물세트</h3></a>
+      <div class="price">
+        <p><del>40,000원</del>  →</p>
+        <p class="discounted-price">28,000원</p>
+      </div>
+    </div>
+
+    <div data-category="coffeebean">
+      <a href="#"><img src="img/에티오피아 아바야 게이샤.jpg" alt="히즈빈스 싱글오리진 에티오피아 아바야 게이샤 이미지"></a>
+        <a href="#"><h3>히즈빈스 싱글오리진 에티오피아 아바야 게이샤(200g)</h3></a>
+      <div class="price">
+        <p><del>50,000원</del>  →</p>
+        <p class="discounted-price">35,000원</p>
+      </div>
+    </div>
+
+    <div data-category="coldbrew">
+      <a href="#"><img src="img/히즈빈스 콜드브루 게이샤 오리지널.png" alt="히즈빈스 콜드브루 게이샤 오리지널 이미지"></a>
+        <a href="#"><h3>히즈빈스 스페셜티 콜드브루 게이샤 오리지널 40ml 12개</h3></a>
+      <div class="price">
+        <p><del>60,000원</del>  →</p>
+        <p class="discounted-price">42,000원</p>
+      </div>
+    </div>
+
+    <div data-category="capsule coffe">
+      <a href="#"><img src="img/커피캡슐.png" alt="히즈빈스 돌체구스토 호환 캡슐"></a>
+        <a href="#"><h3>히즈빈스 게이샤 블렌드 캡슐커피 4박스 _ 돌체구스토 호환</h3></a>
+      <div class="price">
+        <p><del>1,160,000원</del>  →</p>
+        <p class="discounted-price">442,000원</p>
+      </div>
+    </div>
+
+    <div data-category="dripbag">
+      <a href="#"><img src="img/히즈빈스 블루마운틴.png" alt="히즈빈스 톰 블랜드 블루마운틴 이미지"></a>
+        <a href="#"><h3>히즈빈스 톰 블랜드 블루마운틴 드립백(10gx6)</h3></a>
+      <div class="price">
+        <p><del>70,000원</del>  →</p>
+        <p class="discounted-price">49,000원</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <p>상호명: (주)향기내는사람들(향기제작소) 대표자: 임정택 / TEL: 02-123-4567 / E-mail: Teddy@hisbeans.com / 주소: 헤이 그라운드 성수시작점</p>
+  </footer>
+</div>
+
+<div class="function_btn">
+  <button id="DM" class="d_mode">다크 모드</button>
+  <button id="alt_text">대체텍스트제거</button>
+  <button id="bigc">쉬운컨트롤ON</button>
+  <button id="shine">명도 -</button>
+</div>
+
+
+  <script src="main.js"></script>
+  <script src="slideshow.js"></script>
+
 </body>
 </html>
